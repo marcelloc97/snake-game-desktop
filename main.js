@@ -7,7 +7,7 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 720,
+    width: 760,
     height: 720,
     resizable: true,
     titleBarStyle: "hidden",
@@ -19,7 +19,7 @@ function createWindow() {
 
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "index.html"),
+      pathname: path.join(__dirname, "public", "index.html"),
       protocol: "file:",
       slashes: true,
     })
@@ -31,7 +31,7 @@ function createWindow() {
     mainWindow = null;
   });
 
-  mainWindow.webContents.openDevTools({ mode: "detach" });
+  //mainWindow.webContents.openDevTools({ mode: "detach" });
 }
 
 app.on("ready", createWindow);
@@ -77,7 +77,7 @@ async function setActivity() {
       details: `eated ${fruits} fruits`,
       state: "hunting for fruits",
       startTimestamp,
-      largeImageKey: "swap_logo",
+      largeImageKey: "swap_icon",
       largeImageText: "Marcello's Snake Game",
       instance: false,
     });
@@ -86,7 +86,7 @@ async function setActivity() {
       details: `p1: ${fruits} X p2: ${fruits_two}`,
       state: "hunting for fruits with his partner",
       startTimestamp,
-      largeImageKey: "swap_logo",
+      largeImageKey: "swap_icon",
       largeImageText: "Marcello's Snake Game",
       partyMax: 2,
       partySize: 2,
@@ -97,7 +97,7 @@ async function setActivity() {
       details: `really choosing an option?`,
       state: "in menu",
       startTimestamp,
-      largeImageKey: "swap_logo",
+      largeImageKey: "swap_icon",
       largeImageText: "Marcello's Snake Game",
       instance: false,
     });
